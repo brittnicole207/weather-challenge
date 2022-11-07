@@ -1,146 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!--External CSS Document--> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Links-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/4d70f3ad75.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <link rel='stylesheet' href='assets/styles.css'>
-    <title>Weather Dashboard</title>
-<!--May need to move to end of the document-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--JQuery, Font Awesome, and Bootstrap Links-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4d70f3ad75.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <!--Page Title-->
+    <!--CSS Stylesheet-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Weather Dashboard</title>
-
   </head>
 
   <body>
-	
-    <!--Header-->
-    <header class="bg-light">
-        <p class="text-center">Weather Dashboard</p>
-    </header>
+    <!--Nav at Top-->
+    <nav class="bg-dark">
+      <span class="text-center">Weather Dashboard</span>
+    </nav>
 
     <!--Main Body of Page-->
-    <div class='main-container container-fluid'>
-        
-    <!-- Search Section -->
-        <div class="row"> <!--CSS Class that turns it into a row--> 
-            <div id="search-aside" class="col-md-4">
-                <div class="card-body">
-                    <h5>Search for a city:</h5>
-                        <form class="form-inline">
-                            <input type="search" placeholder="Enter a city name" class="form-control mr-sm-2 input" />
-                                <button class="btn btn-primary my-2 my-sm-0 search search-button" type="submit">
-                                    <i class="fas fa-search-location"></i>
-                                </button>
-                        </form>
+    <div class="main-container container-fluid">
+      <!-- Search Section -->
+      <div class="row">
+        <!--CSS Class that turns it into a row-->
+        <!--Searches for a city-->
+        <div id="search-section" class="col-md-4">
+          <div class="card-body">
+            <h5>Search for a city:</h5>
+            <form class="form-inline">
+              <input
+                type="search"
+                placeholder="Enter a city name"
+                class="form-control mr-sm-2 input"
+              />
+              <button
+                class="btn btn-primary my-2 my-sm-0 search search-button"
+                type="submit"
+              >
+                <i class="fas fa-search-location"></i>
+              </button>
+            </form>
 
-                <div class="cities-list"></div>
-            </div>
+            <div class="cities-list"></div>
+          </div>
         </div>
 
-    <!--Containter for Weather Search Results -->
+        <!--Containter for Weather Search Results -->
         <div class="col-md-8 container-left-columns">
-            <!--Current city details-->
+          <!--Current city details-->
+          <div class="row">
+            <div class="card card-city">
+              <div class="card-body">
+                <p class="current-date"></p>
+                <p class="city"></p>
+                <p class="weather-icon"></p>
+                <p></p>
+                <p class="temperature"></p>
+                <p class="humidity"></p>
+                <p class="wind"></p>
+                <p class="uv"></p>
+              </div>
+            </div>
+          </div>
+
+          <!--Title for the Five Day Forecast-->
+          <div class="row-blue">
             <div class="row">
-                <div class="card card-city">
-                    <div class="card-body">
-                        <p class="current-date"></p>
-                        <p class="city"></p>
-                        <p class="weather-icon"><p> 
-                        <p class="temperature"></p>
-                        <p class="humidity"></p>
-                        <p class="wind"></p>
-                        <p class="uv"></p> 
-                    </div>
+              <div class="forecast-title">
+                <div class="cbforecast">
+                  <h5>Five Day Forecast:</h5>
                 </div>
-            </div>  
+              </div>
+            </div>
 
+            <!--5 Day Forecast Days-->
+            <div class="row gutters">
+              <!--Day One-->
+              <div class="col">
+                <div class="card forecast-day">
+                  <div class="card-body bg-primary">
+                    <p class="day-one-date"></p>
+                    <p class="day-one-icon"></p>
+                    <p class="day-one-temperature"></p>
+                    <p class="day-one-humidity"></p>
+                  </div>
+                </div>
+              </div>
 
+              <!--Day Two-->
+              <div class="col">
+                <div class="card forecast">
+                  <div class="card-body bg-primary">
+                    <p class="day-two-date"></p>
+                    <p class="day-two-icon"></p>
+                    <p class="day-two-temperature"></p>
+                    <p class="day-two-humidity"></p>
+                  </div>
+                </div>
+              </div>
 
-                    <!--5 Day Forecast Title-->
-                    <div class="row-blue">
-                    <div class="row">
-                        <div class="forecast-title">
-                            <div class="cbforecast">
-                                <h5>5-Day Forecast:</h5>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!--5 Day Forecast Days-->
-                    <div class="row gutters">
+              <!-- Day Three-->
+              <div class="col">
+                <div class="card forecast">
+                  <div class="card-body bg-primary">
+                    <p class="day-three-date"></p>
+                    <p class="day-three-icon"></p>
+                    <p class="day-three-temperature"></p>
+                    <p class="day-three-humidity"></p>
+                  </div>
+                </div>
+              </div>
 
-                        <!--Day 1-->
-                            <div class="col">
-                                <div class="card forecast-day">
-                                    <div class="card-body bg-primary">
-                                        <p class="day-one-date"></p>
-                                        <p class="day-one-icon"></p>
-                                        <p class="day-one-temperature"></p>
-                                        <p class="day-one-humidity"></p>
-                                    </div>
-                                </div>
-                            </div>
+              <!--Day 4-->
+              <div class="col">
+                <div class="card forecast">
+                  <div class="card-body bg-primary">
+                    <p class="day-four-date"></p>
+                    <p class="day-four-icon"></p>
+                    <p class="day-four-temperature"></p>
+                    <p class="day-four-humidity"></p>
+                  </div>
+                </div>
+              </div>
 
-                        <!--Day 2-->
-                            <div class="col">
-                                <div class="card forecast">
-                                    <div class="card-body bg-primary">
-                                        <p class="day-two-date"></p>
-                                        <p class="day-two-icon"></p>
-                                        <p class="day-two-temperature"></p>
-                                        <p class="day-two-humidity"></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <!-- Day 3-->
-                            <div class="col">
-                                <div class="card forecast">
-                                    <div class="card-body bg-primary">
-                                        <p class="day-three-date"></p>
-                                        <p class="day-three-icon"></p>
-                                        <p class="day-three-temperature"></p>
-                                        <p class="day-three-humidity"></p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        <!--Day 4-->
-                            <div class="col">
-                                <div class="card forecast">
-                                    <div class="card-body bg-primary">
-                                        <p class="day-four-date"></p>
-                                        <p class="day-four-icon"></p>
-                                        <p class="day-four-temperature"></p>
-                                        <p class="day-four-humidity"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        <!--Day 5-->
-                            <div class="col">
-                                <div class="card forecast">
-                                    <div class="card-body bg-primary">
-                                        <p class="day-five-date"></p>
-                                        <p class="day-five-icon"></p>
-                                        <p class="day-five-temperature"></p>
-                                        <p class="day-five-humidity"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        <!--End Days-->     
-
+              <!--Day 5-->
+              <div class="col">
+                <div class="card forecast">
+                  <div class="card-body bg-primary">
+                    <p class="day-five-date"></p>
+                    <p class="day-five-icon"></p>
+                    <p class="day-five-temperature"></p>
+                    <p class="day-five-humidity"></p>
+                  </div>
+                </div>
+              </div>
+              <!--End Days-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-<script src='./assets/script.js'></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--JS Scripts-->
+  <script src="assets/js/script.js"></script>
 </html>
