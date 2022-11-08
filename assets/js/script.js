@@ -54,7 +54,7 @@ $.ajax({
   //URL for UV Index
   var lat = response.coord.lat;
   var lon = response.coord.lon;
-  var queryURLUv =
+  var queryURL =
     "https://api.openweathermap.org/data/2.5/uvi?lat=" +
     lat +
     "&lon=" +
@@ -63,7 +63,7 @@ $.ajax({
 
   //UV Index Function
   $.ajax({
-    url: queryURLUv,
+    url: queryURL,
     method: "GET",
   }).then(function (response) {
     var uvValue = response.value;
