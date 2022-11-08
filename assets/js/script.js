@@ -1,24 +1,23 @@
-//Api Key
-const apiKey = "df2bb5439b348fc694c1df0bcc4620f9";
-//const moment = require("moment");
+//API Key
+var apiKey = "&appid=&df2bb5439b348fc694c1df0bcc4620f9";
 
 //Dom Elements
-let inputEl = document.querySelector(".input");
-let searchBtnEl = document.querySelector(".search.button");
-let citiesListEl = document.querySelector(".cities-list");
+var inputEl = document.querySelector(".input");
+var searchBtnEl = document.querySelector(".search-button");
+var citiesListEl = document.querySelector(".cities-list");
 
 // Sets the cityName in LocalStorage
-let cityName = localstorage.getItem("cityNameStore");
+var cityName = localStorage.getItem("cityNameStore");
 
 // URL for current day parameters (city name + weather units of measurements)
-let weatherURL =
+var URLWeather =
   "https://api.openweathermap.org/data/2.5/weather?q=" +
   cityName +
   "&units=imperial" +
   apiKey;
 
 // URL for 5-days forecast parameters (city name + weather units of measurements)
-let forecastURL =
+var URLForecast =
   "https://api.openweathermap.org/data/2.5/forecast?q=" +
   cityName +
   "&units=imperial" +
@@ -53,9 +52,9 @@ $.ajax({
   $(".temperature").text("Temperature: " + response.main.temp + " F");
 
   //URL for UV Index
-  const lat = response.coord.lat;
-  const lon = response.coord.lon;
-  let queryURLUV =
+  var lat = response.coord.lat;
+  var lon = response.coord.lon;
+  var queryURLUv =
     "https://api.openweathermap.org/data/2.5/uvi?lat=" +
     lat +
     "&lon=" +
