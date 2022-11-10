@@ -1,5 +1,5 @@
 //API Key
-var apiKey = "&appid=&df2bb5439b348fc694c1df0bcc4620f9";
+var apiKey = "&appid=df2bb5439b348fc694c1df0bcc4620f9";
 
 //Dom Elements
 var inputEl = document.querySelector(".input");
@@ -29,7 +29,7 @@ function recordCityData() {
 }
 
 // Append the search input from localStorage to the cities list
-for (var i = 0; i < localStorage.length; i++) {
+for (let i = 0; i < localStorage.length; i++) {
   $("cities-list").append(
     "<p>" + localStorage.getItem(localStorage.key(i)) + "</p>"
   );
@@ -78,7 +78,7 @@ $.ajax({
 function uvColor(uvValue, colorbgd) {
   if (uvValue <= 2) {
     colorbgd = "#66FF00"; // HEX Code for Green will return if the UV is less than or equal to two
-  } else if (uvValue <= 5 && uvNum > 2) {
+  } else if (uvValue <= 5 && uvValue > 2) {
     colorbgd = "#FFBB00"; // HEX Code for Orange. The background of the UV value will return if the UV is less than or equal to five
   } else if (uvValue >= 6 && uvValue > 5) {
     colorbgd = "#FF0000"; // HEX Code for Red. The background of the UV value will return red if the UV is greater than or equal to 6 and greater than 5
