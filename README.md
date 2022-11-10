@@ -30,9 +30,7 @@ https://blooming-forest-36438.herokuapp.com/
 
 What does it look like? 
 
-![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.30.44%20PM.png)
-![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.45.08%20PM.png)
-![screenshot](./assets/Screen%20Shot%202022-11-01%20at%201.34.13%20PM.png)
+![screenshot](./assets/Screenshot%2022-11-10%at%4.12.00%PM.png)
 
 # Technology
 
