@@ -30,7 +30,7 @@ https://blooming-forest-36438.herokuapp.com/
 
 What does it look like? 
 
-![screenshot](./assets/Screenshot%2022-11-10%at%4.12.00%PM.png)
+![Screenshot](https://github.com/brittnicole207/weather-challeng/assets/Screenshot%2022-11-10%at%4.12.00%PM.png?raw=true)
 
 # Technology
 
