@@ -1,17 +1,14 @@
-# Plan Your Travel
+# Plan Your Travel 
 
-Your next fitness tracker!
+Don't let the weather get in the way of your travels! 
 
 # Table of Contents
 
     Description
-    Installation
     Usage
-    Demo
     Link
+    Screenshot
     Technology
-    Contributors
-    License
     Questions
 
 # Description
@@ -30,7 +27,7 @@ https://blooming-forest-36438.herokuapp.com/
 
 What does it look like? 
 
-![Screenshot](https://github.com/brittnicole207/weather-challeng/assets/Screenshot%2022-11-10%at%4.12.00%PM.png?raw=true)
+![Screenshot](https://github.com/brittnicole207/weather-challenge/assets/Screenshot%2022-11-10%at%4.12.00%PM.png?raw=true)
 
 # Technology
 
